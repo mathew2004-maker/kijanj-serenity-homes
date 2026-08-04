@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Phone, Mail, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MessageCircle, Send, Clock, User } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -35,58 +35,120 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl">
         <div
           ref={ref}
-          className="grid gap-14 transition-all duration-700 ease-out md:grid-cols-2"
+          className="grid gap-14 transition-all duration-700 ease-out lg:grid-cols-2"
         >
+          {/* Left Column */}
           <div>
             <p className="mb-3 text-sm font-medium text-slate-400">Get in touch</p>
-            <h2 className="text-3xl font-medium text-slate-900">
-              Ready to move in?
-            </h2>
+            <h2 className="text-3xl font-medium text-slate-900">Ready to move in?</h2>
             <p className="mt-5 text-base text-slate-500">
               Send us a message and we will get back to you within one business day. You can also call or message us directly.
             </p>
 
-            <div className="mt-8 flex flex-col gap-5">
-              <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-slate-100">
-                  <Phone className="h-5 w-5 text-slate-600" strokeWidth={1.8} />
+            <div className="mt-8 flex flex-col gap-4">
+              {/* Phone Numbers */}
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <div className="mb-4 flex items-center gap-2 text-sm font-medium text-slate-400">
+                  <Phone className="h-4 w-4" strokeWidth={1.8} />
+                  Phone numbers
                 </div>
-                <div>
-                  <p className="text-sm text-slate-400">Phone</p>
-                  <p className="font-medium text-slate-900">+254 97 038-831</p>
+                <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100">
+                      <User className="h-4 w-4 text-slate-600" strokeWidth={1.8} />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400">Landlord</p>
+                      <a href="tel:+254 727 311 599" className="font-medium text-slate-900 transition-colors hover:text-slate-600">
+                        +254 (727) 311 599
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100">
+                      <User className="h-4 w-4 text-slate-600" strokeWidth={1.8} />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400">Caretaker</p>
+                      <a href="tel:+15559876543" className="font-medium text-slate-900 transition-colors hover:text-slate-600">
+                        +254 (797) 038 831
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-slate-100">
-                  <Mail className="h-5 w-5 text-slate-600" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-400">Email</p>
-                  <p className="font-medium text-slate-900">hello@kijanjserenity.rent</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-slate-100">
-                  <MessageCircle className="h-5 w-5 text-slate-600" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-400">WhatsApp</p>
-                  <p className="font-medium text-slate-900">+254 97 038-831</p>
-                </div>
-              </div>
-            </div>
 
-            <a
-              href="https://wa.me/15559876543"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-xl bg-green-500 px-7 py-3.5 text-base font-medium text-white transition-all duration-200 hover:bg-green-600"
-            >
-              <MessageCircle className="h-5 w-5" strokeWidth={1.8} />
-              Message on WhatsApp
-            </a>
+              {/* WhatsApp Numbers */}
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <div className="mb-4 flex items-center gap-2 text-sm font-medium text-slate-400">
+                  <MessageCircle className="h-4 w-4" strokeWidth={1.8} />
+                  WhatsApp
+                </div>
+                <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50">
+                      <User className="h-4 w-4 text-green-600" strokeWidth={1.8} />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400">Landlord</p>
+                      <a href="https://wa.me/254727311599" target="_blank" rel="noopener noreferrer" className="font-medium text-slate-900 transition-colors hover:text-green-600">
+                        +254 (727) 311 599
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50">
+                      <User className="h-4 w-4 text-green-600" strokeWidth={1.8} />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-400">Caretaker</p>
+                      <a href="https://wa.me/15559876543" target="_blank" rel="noopener noreferrer" className="font-medium text-slate-900 transition-colors hover:text-green-600">
+                        +254 (797) 038 831
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email & Hours */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100">
+                    <Mail className="h-4 w-4 text-slate-600" strokeWidth={1.8} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-400">Email</p>
+                    <a href="mailto:hello@kijanjserenity.rent" className="font-medium text-slate-900 transition-colors hover:text-slate-600">
+                      hello@kijaniserenity.rent
+                    </a>
+                  </div>
+                </div>
+
+                {/* <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100">
+                    <Clock className="h-4 w-4 text-slate-600" strokeWidth={1.8} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-400">Office hours</p>
+                    <p className="font-medium text-slate-900">Mon – Sat, 8am – 6pm</p>
+                  </div>
+                </div> */}
+
+                </div>
+
+              <a
+                href="https://wa.me/15551234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-7 py-3.5 text-base font-medium text-white transition-all duration-200 hover:bg-green-600"
+              >
+                <MessageCircle className="h-5 w-5" strokeWidth={1.8} />
+                Message us on WhatsApp
+              </a>
+            </div>
           </div>
 
+          {/* Form */}
           <div className="rounded-xl border border-slate-200 bg-white p-8">
             {submitted ? (
               <div className="flex h-full flex-col items-center justify-center text-center">
@@ -129,7 +191,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition-colors focus:border-slate-900"
-                    placeholder="+254 000-0000"
+                    placeholder="+1 (555) 000-0000"
                   />
                 </div>
                 <div>
@@ -155,7 +217,8 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-xl border border-slate-200">
+        {/* Google Map */}
+         <div className="mt-12 overflow-hidden rounded-xl border border-slate-200">
         <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.906174445336!2d37.719542200000014!3d0.13866445000000424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17883c9c8a6c55e5%3A0xe97690d5690c3599!2sNkomo!5e0!3m2!1sen!2ske!4v1785598895159!5m2!1sen!2ske"
         width="100%"
@@ -165,10 +228,10 @@ export default function Contact() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         className="w-full"
-      ></iframe>
-    </div>
+        >
+        </iframe>
+        </div>
       </div>
     </section>
   );
 }
-
