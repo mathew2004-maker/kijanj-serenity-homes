@@ -126,7 +126,7 @@ export default function Footer() {
                 <a href="tel:+254 (727) 311 599" className="transition-colors hover:text-slate-900">+254 (727) 311 599</a>
               </li>
               <li>
-                <a href="mailto:hello@kijaniserenity.rent" className="transition-colors hover:text-slate-900">hello@kijanjserenity.rent</a>
+                <a href="mailto:hello@kijaniserenity.rent" className="transition-colors hover:text-slate-900">hello@kijaniserenity.rent</a>
               </li>
             </ul>
           </div>
