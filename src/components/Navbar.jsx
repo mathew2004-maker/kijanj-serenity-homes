@@ -37,7 +37,7 @@ export default function Navbar() {
           className="flex items-center gap-2 text-xl font-medium text-slate-900"
         >
           <Home className="h-6 w-6" strokeWidth={1.8} />
-          KIJANJ SERENITY
+          KIJANI SERENITY
         </a>
 
         {/* Desktop */}

@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-6">
           <a href="#home" className="flex items-center gap-2 text-lg font-medium text-slate-900">
             <Home className="h-5 w-5" strokeWidth={1.8} />
-            KIJANJ SERENITY
+            KIJANI SERENITY
           </a>
           <div className="flex gap-4">
             {socialLinks.map((s) => (
