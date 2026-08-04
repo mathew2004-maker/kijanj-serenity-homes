@@ -170,7 +170,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition-colors focus:border-slate-900"
-                    placeholder="John Doe"
+                    placeholder="Mathew Kamau"
                   />
                 </div>
                 <div>
@@ -181,7 +181,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition-colors focus:border-slate-900"
-                    placeholder="john@example.com"
+                    placeholder="mathew@example.com"
                   />
                 </div>
                 <div>
@@ -191,7 +191,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition-colors focus:border-slate-900"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+254 (720) 000-0000"
                   />
                 </div>
                 <div>
